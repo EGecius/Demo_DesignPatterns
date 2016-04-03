@@ -1,5 +1,7 @@
 package com.egecius.demo_designpatterns.i_iterator;
 
+import com.egecius.demo_designpatterns.i_iterator.standard.WaitressUsage;
+
 import org.junit.Before;
 import org.junit.Test;
 

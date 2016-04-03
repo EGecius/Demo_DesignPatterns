@@ -1,4 +1,4 @@
-package com.egecius.demo_designpatterns.i_iterator;
+package com.egecius.demo_designpatterns.i_iterator.iterable;
 
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.egecius.demo_designpatterns.i_iterator;
+package com.egecius.demo_designpatterns.i_iterator.standard;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -6,18 +6,17 @@ import java.util.Iterator;
 /**
  * Menu that returns an iterator
  */
-final class ChineseMenu implements Menu {
+final class IndianMenu implements Menu {
 
 	private final ArrayList<MenuItem> menu = new ArrayList<>();
 
-	ChineseMenu() {
+	IndianMenu() {
 		addDefaults();
 	}
 
 	private void addDefaults() {
-		menu.add(new MenuItem("Black bean stir-fry", 8.00, true));
-		menu.add(new MenuItem("Chicken stir-fy", 9.00, false));
-		menu.add(new MenuItem("Tofu with rice", 7.00, true));
+		menu.add(new MenuItem("Chicken curry", 8.50, false));
+		menu.add(new MenuItem("veg curry", 8.00, true));
 	}
 
 	@Override
