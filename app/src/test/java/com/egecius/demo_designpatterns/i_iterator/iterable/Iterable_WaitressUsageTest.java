@@ -16,7 +16,7 @@ public class Iterable_WaitressUsageTest {
 	}
 
 	@Test
-	public void printVegieItems() {
+	public void printVeggieItems() {
 		usage.printVegieItems();
 	}
 
