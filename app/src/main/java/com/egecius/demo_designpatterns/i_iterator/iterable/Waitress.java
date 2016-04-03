@@ -23,9 +23,7 @@ final class Waitress {
 
 	private void printMenu(final Iterator<Menu> iterator) {
 		Menu menu = iterator.next();
-		Iterator<MenuItem> menuItemIterator = menu.getIterator();
-		while (menuItemIterator.hasNext()) {
-			MenuItem item = menuItemIterator.next();
+		for (final MenuItem item : menu) {
 			print(item);
 		}
 		System.out.println("--- end of menu ---");
@@ -42,9 +40,7 @@ final class Waitress {
 	}
 
 	private void printVeggieItems(final Menu menu) {
-		Iterator<MenuItem> iterator = menu.getIterator();
-		while (iterator.hasNext()) {
-			MenuItem menuItem = iterator.next();
+		for (final MenuItem menuItem : menu) {
 			if (menuItem.isVegetarian) {
 				print(menuItem);
 			}

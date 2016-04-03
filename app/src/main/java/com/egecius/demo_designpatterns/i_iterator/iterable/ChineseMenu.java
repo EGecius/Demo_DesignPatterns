@@ -21,8 +21,7 @@ final class ChineseMenu implements Menu {
 	}
 
 	@Override
-	public Iterator<MenuItem> getIterator() {
+	public Iterator<MenuItem> iterator() {
 		return menu.iterator();
 	}
-
 }
