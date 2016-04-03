@@ -18,7 +18,7 @@ final class MenuItem implements MenuComponent {
 	}
 
 	@Override
-	public Iterator<MenuComponent> iterator() {
+	public Iterator<? extends MenuComponent> iterator() {
 		return new EmptyIterator();
 	}
 
