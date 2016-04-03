@@ -12,12 +12,9 @@ final class GumballMachine implements GumballMachineInterface {
 		state = State.HAS_QUARTER;
 	}
 
-	private void onGumballPurchased() {
-
+	private void onGumballSold() {
 		state = State.GUMBALL_SOLD;
-
 		System.out.println("Dispensing gumball... here you go!");
-
 		transitionToPostSoldState();
 	}
 
@@ -43,8 +40,8 @@ final class GumballMachine implements GumballMachineInterface {
 			case QUARTER_EJECTED:
 				onQuarterEjected();
 				return;
-			case GUMBALL_PURCHASED:
-				onGumballPurchased();
+			case GUMBALL_SOLD:
+				onGumballSold();
 				return;
 			case NONE:
 				return;

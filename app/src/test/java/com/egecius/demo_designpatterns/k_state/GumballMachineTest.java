@@ -63,7 +63,7 @@ public class GumballMachineTest {
 		hasQuarterPreparation();
 
 		//outcome action
-		assertThat(machine.turnCrank()).isEqualTo(Outcome.GUMBALL_PURCHASED);
+		assertThat(machine.turnCrank()).isEqualTo(Outcome.GUMBALL_SOLD);
 
 		//POST-CONDITIONS
 		assertThat(machine.getState()).isEqualTo(State.NO_QUARTER);

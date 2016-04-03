@@ -41,7 +41,7 @@ enum State implements GumballMachineInterface {
 		@Override
 		public Outcome turnCrank() {
 			System.out.println("crank turned");
-			return Outcome.GUMBALL_PURCHASED;
+			return Outcome.GUMBALL_SOLD;
 		}
 	},
 	GUMBALL_SOLD {
