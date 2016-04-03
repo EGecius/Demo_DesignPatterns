@@ -3,90 +3,84 @@ package com.egecius.demo_designpatterns.k_state;
 /**
  * One of the states that {@link GumballMachine} can be in.
  */
-public enum State {
+enum State implements GumballMachineInterface {
 
 	NO_QUARTER {
 		@Override
-		void insertQuarter() {
+		public Outcome insertQuarter() {
 			System.out.println("quarter inserted");
-			machine.onQuarterInserted();
+			return Outcome.QUARTER_INSERTED;
 		}
 
 		@Override
-		void ejectQuarter() {
+		public Outcome ejectQuarter() {
 			System.out.println("you are trying to eject quarter but no quarter was inserted");
+			return Outcome.NONE;
 		}
 
 		@Override
-		void turnCrank() {
+		public Outcome turnCrank() {
 			System.out.println("you are turning a crank but you have to insert a quarter first");
+			return Outcome.NONE;
 
 		}
 	},
 	HAS_QUARTER {
 		@Override
-		void insertQuarter() {
+		public Outcome insertQuarter() {
 			System.out.println("a quarter already inserted, giving this one back to you");
+			return Outcome.NONE;
 		}
 
 		@Override
-		void ejectQuarter() {
+		public Outcome ejectQuarter() {
 			System.out.println("ejecting quarter");
-			machine.onQuarterEjected();
+			return Outcome.QUARTER_EJECTED;
 		}
 
 		@Override
-		void turnCrank() {
+		public Outcome turnCrank() {
 			System.out.println("crank turned");
-			machine.onGumballPurchased();
+			return Outcome.GUMBALL_PURCHASED;
 		}
 	},
 	GUMBALL_SOLD {
 		@Override
-		void insertQuarter() {
+		public Outcome insertQuarter() {
 			System.out.println("wait till your gumball is being dispensed");
+			return Outcome.NONE;
 		}
 
 		@Override
-		void ejectQuarter() {
+		public Outcome ejectQuarter() {
 			System.out.println("wait till your gumball is being dispensed");
+			return Outcome.NONE;
 		}
 
 		@Override
-		void turnCrank() {
+		public Outcome turnCrank() {
 			System.out.println("wait till your gumball is being dispensed");
+			return Outcome.NONE;
 		}
 	},
 	OUT_OF_BALLS {
 		@Override
-		void insertQuarter() {
+		public Outcome insertQuarter() {
 			System.out.println("can't do anything. No gumballs left");
+			return Outcome.NONE;
 		}
 
 		@Override
-		void ejectQuarter() {
+		public Outcome ejectQuarter() {
 			System.out.println("can't do anything. No gumballs left");
+			return Outcome.NONE;
 		}
 
 		@Override
-		void turnCrank() {
+		public Outcome turnCrank() {
 			System.out.println("can't do anything. No gumballs left");
+			return Outcome.NONE;
 		}
-	};
-
-	private static GumballMachine machine;
-
-	void setMachine(GumballMachine machine) {
-		State.machine = machine;
 	}
 
-
-	/** user has injected a quarter coin */
-	abstract void insertQuarter();
-
-	/** user has pressed a button to eject a quarter */
-	abstract void ejectQuarter();
-
-	/** user has turned a buy a gumball that he has inserted a coin for */
-	abstract void turnCrank();
 }
