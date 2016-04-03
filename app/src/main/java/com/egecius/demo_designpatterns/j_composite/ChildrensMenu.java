@@ -16,4 +16,9 @@ final class ChildrensMenu extends Menu {
 	public String toString() {
 		return "\nChildren's menu";
 	}
+
+	@Override
+	public boolean isSuitableForVegetarians() {
+		return true;
+	}
 }

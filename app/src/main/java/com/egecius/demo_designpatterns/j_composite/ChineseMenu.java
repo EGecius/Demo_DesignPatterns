@@ -20,4 +20,9 @@ final class ChineseMenu extends Menu {
 	public String toString() {
 		return "\nChinese menu";
 	}
+
+	@Override
+	public boolean isSuitableForVegetarians() {
+		return true;
+	}
 }

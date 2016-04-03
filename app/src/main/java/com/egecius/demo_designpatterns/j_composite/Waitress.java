@@ -22,15 +22,33 @@ final class Waitress {
 		}
 	}
 
+	void printVeggieItems(){
+		for (final Menu menu : menus) {
+			printVeggieComponentRecursively(menu);
+		}
+	}
+
 	private void printComponentRecursively(final MenuComponent component) {
 
 		System.out.println(component);
 
 		Iterator<? extends MenuComponent> iterator = component.iterator();
-
 		while (iterator.hasNext()) {
 			MenuComponent innerComponent = iterator.next();
 			printComponentRecursively(innerComponent);
+		}
+	}
+
+	private void printVeggieComponentRecursively(final MenuComponent component) {
+
+		if (component.isSuitableForVegetarians()) {
+			System.out.println(component);
+		}
+
+		Iterator<? extends MenuComponent> iterator = component.iterator();
+		while (iterator.hasNext()) {
+			MenuComponent innerComponent = iterator.next();
+			printVeggieComponentRecursively(innerComponent);
 		}
 	}
 

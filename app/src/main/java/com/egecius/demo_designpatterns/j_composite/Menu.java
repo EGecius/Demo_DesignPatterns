@@ -4,7 +4,7 @@ package com.egecius.demo_designpatterns.j_composite;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-class Menu implements MenuComponent {
+abstract class Menu implements MenuComponent {
 
 	private ArrayList<MenuComponent> menuItems = new ArrayList<>();
 

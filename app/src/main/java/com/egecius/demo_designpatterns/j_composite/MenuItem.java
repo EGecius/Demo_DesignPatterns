@@ -23,6 +23,11 @@ final class MenuItem implements MenuComponent {
 	}
 
 	@Override
+	public boolean isSuitableForVegetarians() {
+		return isVegetarian;
+	}
+
+	@Override
 	public String toString() {
 		return "MenuItem{" +
 				"title='" + title + '\'' +

@@ -18,7 +18,12 @@ public class CompositeUsageTest {
 	@Test
 	public void when__then() {
 		//WHEN
-		usage.demo();
+		usage.printMenus();
+	}
+
+	@Test
+	public void printVeggieItems() {
+		usage.printVegieItems();
 	}
 
 }

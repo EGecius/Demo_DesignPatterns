@@ -5,4 +5,7 @@ import java.util.Iterator;
 interface MenuComponent {
 
 	Iterator<? extends MenuComponent> iterator();
+
+	boolean isSuitableForVegetarians();
+
 }
