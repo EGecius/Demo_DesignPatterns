@@ -6,11 +6,9 @@ final class GumballMachine implements GumballMachineInterface {
 	private static final State INITIAL_STATE = State.NO_QUARTER;
 
 	private State state = INITIAL_STATE;
-	private boolean isQuarterInserted;
 	private int numberOfGumballsAvailable = INITIAL_NUMBER_OF_GUMBALLS;
 
 	private void onQuarterInserted() {
-		isQuarterInserted = true;
 		state = State.HAS_QUARTER;
 	}
 
@@ -24,7 +22,6 @@ final class GumballMachine implements GumballMachineInterface {
 	}
 
 	private void transitionToPostSoldState() {
-		isQuarterInserted = false;
 		numberOfGumballsAvailable--;
 
 		if (numberOfGumballsAvailable > 0) {
@@ -35,8 +32,7 @@ final class GumballMachine implements GumballMachineInterface {
 	}
 
 	private void onQuarterEjected() {
-		isQuarterInserted = false;
-		state = State.HAS_QUARTER;
+		state = State.NO_QUARTER;
 	}
 
 	private void processOutcome(final Outcome outcome) {
@@ -82,7 +78,7 @@ final class GumballMachine implements GumballMachineInterface {
 		return numberOfGumballsAvailable;
 	}
 
-	public boolean hasQuarterInserted() {
-		return isQuarterInserted;
+	public State getState() {
+		return state;
 	}
 }
