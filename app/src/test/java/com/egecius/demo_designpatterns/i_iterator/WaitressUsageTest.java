@@ -16,9 +16,14 @@ public class WaitressUsageTest {
 	}
 
 	@Test
-	public void when__then() {
-		usage.demo();
+	public void printAllMenus() {
+		usage.printAllMenus();
 
+	}
+
+	@Test
+	public void printVeggieItems() {
+		usage.printVegieItems();
 	}
 
 }

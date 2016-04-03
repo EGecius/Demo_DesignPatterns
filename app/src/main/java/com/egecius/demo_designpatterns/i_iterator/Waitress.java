@@ -7,7 +7,7 @@ import java.util.Iterator;
 
 final class Waitress {
 
-	final ArrayList<Menu> menus = new ArrayList<>();
+	private final ArrayList<Menu> menus = new ArrayList<>();
 
 	public Waitress(final Menu... menus) {
 		Collections.addAll(this.menus, menus);
@@ -26,8 +26,28 @@ final class Waitress {
 		Iterator<MenuItem> menuItemIterator = menu.getIterator();
 		while (menuItemIterator.hasNext()) {
 			MenuItem item = menuItemIterator.next();
-			System.out.println(item);
+			print(item);
 		}
 		System.out.println("--- end of menu ---");
+	}
+
+	private void print(final MenuItem item) {
+		System.out.println(item);
+	}
+
+	public void printVeggieItems() {
+		for (final Menu menu : menus) {
+			printVeggieItems(menu);
+		}
+	}
+
+	private void printVeggieItems(final Menu menu) {
+		Iterator<MenuItem> iterator = menu.getIterator();
+		while (iterator.hasNext()) {
+			MenuItem menuItem = iterator.next();
+			if (menuItem.isVegetarian) {
+				print(menuItem);
+			}
+		}
 	}
 }
