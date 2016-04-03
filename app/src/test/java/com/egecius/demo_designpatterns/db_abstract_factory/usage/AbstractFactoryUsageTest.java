@@ -1,7 +1,7 @@
-package com.egecius.demo_designpatterns.abstract_factory.usage;
+package com.egecius.demo_designpatterns.db_abstract_factory.usage;
 
 
-import com.egecius.demo_designpatterns.abstract_factory.interfaces.Pizza;
+import com.egecius.demo_designpatterns.db_abstract_factory.interfaces.Pizza;
 
 import org.junit.Before;
 import org.junit.Test;

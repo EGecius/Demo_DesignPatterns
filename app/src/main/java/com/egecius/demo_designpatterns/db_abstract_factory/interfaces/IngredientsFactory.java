@@ -1,4 +1,4 @@
-package com.egecius.demo_designpatterns.abstract_factory.interfaces;
+package com.egecius.demo_designpatterns.db_abstract_factory.interfaces;
 
 public interface IngredientsFactory {
 

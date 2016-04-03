@@ -1,6 +1,6 @@
-package com.egecius.demo_designpatterns.abstract_factory.implementations;
+package com.egecius.demo_designpatterns.db_abstract_factory.implementations;
 
-import com.egecius.demo_designpatterns.abstract_factory.interfaces.IngredientsFactory;
+import com.egecius.demo_designpatterns.db_abstract_factory.interfaces.IngredientsFactory;
 
 /**
  * Single Responsibility:
