@@ -1,6 +1,6 @@
-package com.egecius.demo_designpatterns.decorator.usage;
+package com.egecius.demo_designpatterns.c_decorator.usage;
 
-import com.egecius.demo_designpatterns.decorator.intefaces.Beverage;
+import com.egecius.demo_designpatterns.c_decorator.intefaces.Beverage;
 
 import org.junit.Before;
 import org.junit.Test;

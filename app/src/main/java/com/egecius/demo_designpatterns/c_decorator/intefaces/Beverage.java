@@ -1,4 +1,4 @@
-package com.egecius.demo_designpatterns.decorator.intefaces;
+package com.egecius.demo_designpatterns.c_decorator.intefaces;
 
 /**
  * Defines a type of a beverage

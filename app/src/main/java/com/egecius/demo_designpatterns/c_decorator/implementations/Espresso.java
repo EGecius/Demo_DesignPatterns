@@ -1,6 +1,6 @@
-package com.egecius.demo_designpatterns.decorator.implementations;
+package com.egecius.demo_designpatterns.c_decorator.implementations;
 
-import com.egecius.demo_designpatterns.decorator.intefaces.Beverage;
+import com.egecius.demo_designpatterns.c_decorator.intefaces.Beverage;
 
 public class Espresso implements Beverage {
 
