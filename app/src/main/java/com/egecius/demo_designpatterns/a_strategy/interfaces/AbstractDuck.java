@@ -1,4 +1,4 @@
-package com.egecius.demo_designpatterns.strategy.interfaces;
+package com.egecius.demo_designpatterns.a_strategy.interfaces;
 
 public abstract class AbstractDuck {
 

@@ -1,8 +1,8 @@
-package com.egecius.demo_designpatterns.strategy.implementations.behaviors;
+package com.egecius.demo_designpatterns.a_strategy.implementations.behaviors;
 
 import android.util.Log;
 
-import com.egecius.demo_designpatterns.strategy.interfaces.FlyBehavior;
+import com.egecius.demo_designpatterns.a_strategy.interfaces.FlyBehavior;
 
 public class FlyWithWings implements FlyBehavior {
 	@Override

@@ -1,4 +1,4 @@
-package com.egecius.demo_designpatterns.factory.interfaces;
+package com.egecius.demo_designpatterns.d_factory.interfaces;
 
 public interface PizzaStore {
 
