@@ -8,8 +8,11 @@ abstract class CaffeineBeverage {
 		pourWater();
 		brew();
 		pourInCup();
-		addCondiments();
+		if (isCustomerWantsCondiments()) {
+			addCondiments();
+		}
 	}
+
 
 	private void pourWater() {
 		System.out.println("pouring water");
@@ -21,5 +24,8 @@ abstract class CaffeineBeverage {
 	}
 
 	protected abstract void addCondiments();
+
+	/** Represents a hook for a template pattern */
+	protected abstract boolean isCustomerWantsCondiments();
 
 }

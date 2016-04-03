@@ -11,4 +11,9 @@ public final class Latte extends CaffeineBeverage {
 	protected void addCondiments() {
 		System.out.println("adding sugar and extra foam for Latte");
 	}
+
+	@Override
+	protected boolean isCustomerWantsCondiments() {
+		return false;
+	}
 }
