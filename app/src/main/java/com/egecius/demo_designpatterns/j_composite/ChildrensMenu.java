@@ -11,4 +11,9 @@ final class ChildrensMenu extends Menu {
 		add(new MenuItem("pancakes", 7.00, true));
 		add(new MenuItem("ice cream", 5.00, true));
 	}
+
+	@Override
+	public String toString() {
+		return "\nChildren's menu";
+	}
 }

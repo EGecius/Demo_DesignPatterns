@@ -15,4 +15,9 @@ final class ChineseMenu extends Menu {
 		add(new MenuItem("Chicken stir-fy", 9.00, false));
 		add(new MenuItem("Tofu with rice", 7.00, true));
 	}
+
+	@Override
+	public String toString() {
+		return "\nChinese menu";
+	}
 }

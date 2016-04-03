@@ -18,18 +18,20 @@ final class Waitress {
 
 	void printMenus(){
 		for (final Menu menu : menus) {
-			printMenu(menu);
+			printComponentRecursively(menu);
 		}
 	}
 
-	private void printMenu(final Menu menu) {
-		Iterator<? extends MenuComponent> iterator = menu.iterator();
+	private void printComponentRecursively(final MenuComponent component) {
+
+		System.out.println(component);
+
+		Iterator<? extends MenuComponent> iterator = component.iterator();
 
 		while (iterator.hasNext()) {
-			MenuComponent component = iterator.next();
-			System.out.println(component);
+			MenuComponent innerComponent = iterator.next();
+			printComponentRecursively(innerComponent);
 		}
-
-		System.out.println("--- end of menu ---");
 	}
+
 }

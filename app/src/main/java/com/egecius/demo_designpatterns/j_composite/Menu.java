@@ -6,9 +6,9 @@ import java.util.Iterator;
 
 class Menu implements MenuComponent {
 
-	private ArrayList<MenuItem> menuItems = new ArrayList<>();
+	private ArrayList<MenuComponent> menuItems = new ArrayList<>();
 
-	public void add(MenuItem item) {
+	public void add(MenuComponent item) {
 		menuItems.add(item);
 	}
 
