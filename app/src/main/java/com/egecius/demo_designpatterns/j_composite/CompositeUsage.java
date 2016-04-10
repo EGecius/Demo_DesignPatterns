@@ -9,7 +9,7 @@ final class CompositeUsage {
 		waitress.printMenus();
 	}
 
-	void printVegieItems() {
+	void printVeggieItems() {
 		ChineseMenu chineseMenu = new ChineseMenu();
 		WesternMenu westernMenu = new WesternMenu();
 		Waitress waitress = new Waitress(chineseMenu, westernMenu);

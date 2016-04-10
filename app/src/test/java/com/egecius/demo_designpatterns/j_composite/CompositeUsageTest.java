@@ -23,7 +23,7 @@ public class CompositeUsageTest {
 
 	@Test
 	public void printVeggieItems() {
-		usage.printVegieItems();
+		usage.printVeggieItems();
 	}
 
 }
