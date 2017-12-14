@@ -20,7 +20,7 @@ public class ClientTest {
     private CallbackFrameworkWrapper mCallbackFrameworkWrapper;
 
     @Test
-    public void connectsToBluetooth() {
+    public void connectsToBluetoothWithMocks() {
         givenUsingMockCallbackFrameworkWrapper();
         assertThat(mSut.hasConnectedToBluetooth()).isFalse();
 
@@ -40,4 +40,25 @@ public class ClientTest {
         mCallbackCaptor.getValue().onSuccess();
     }
 
+    @Test
+    public void connectsToBluetoothWithRealObjects() {
+        givenUsingRealCallbackFrameworkWrapper();
+        assertThat(mSut.hasConnectedToBluetooth()).isFalse();
+
+        mSut.connectToBluetooth();
+
+        assertThat(mSut.hasConnectedToBluetooth()).isTrue();
+    }
+
+    private void givenUsingRealCallbackFrameworkWrapper() {
+        mCallbackFrameworkWrapper = new CallbackFrameworkWrapper(new FakeCallbackFramework());
+        mSut = new Client(mCallbackFrameworkWrapper);
+    }
+
+    private class FakeCallbackFramework extends CallbackFramework {
+        @Override
+        public void callExternally(CallbackFramework.Callback callback) {
+            callback.onSuccess();
+        }
+    }
 }
